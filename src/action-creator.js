@@ -1,10 +1,10 @@
-var dispatcher = require('./app-dispatcher.js');
-var constants = require('./constants.js');
+var Dispatcher = require('./app-dispatcher.js');
+var Constants = require('./constants.js');
 
 var ActionCreator = {
 	addItemToCart: function(data) {
-		dispatcher.dispatch({
-			actionType: constants.ADD_ITEM,
+		Dispatcher.dispatch({
+			actionType: Constants.ADD_ITEM,
 			item: data
 		});
 	}
