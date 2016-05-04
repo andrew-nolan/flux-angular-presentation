@@ -5,7 +5,6 @@ var Constants = require('../src/constants.js');
 
 describe('A cart store', function() {
 	it('should add an item to the cart', function(done) {
-		console.log('Starting test for adding an item to the cart');
 		var newItem = {
 			name: 'new item',
 			cost: 19.99
@@ -22,7 +21,6 @@ var _cartContents;
 
 var registerStoreListener = function(done){
 	CartStore.on(Constants.CART_UPDATE, function() {
-		console.log('Listening method invoked');
 		_cartContents = CartStore.getItems();
 		++_invocationCount;
 		done();

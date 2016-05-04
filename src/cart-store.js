@@ -16,7 +16,6 @@ Dispatcher.register(function(action) {
 	if(actionType === Constants.ADD_ITEM) {
 		_items.push(action.item);
 		CartStore.emit(Constants.CART_UPDATE);
-		console.log(Constants.CART_UPDATE + ' change emitted');
 	}
 });
 
