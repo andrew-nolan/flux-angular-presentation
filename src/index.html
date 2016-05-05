@@ -1,9 +1,34 @@
 <!DOCTYPE html>
+<html lang="en" ng-app="shoppingCart">
 	<head>
 		<meta charset="utf-8" />
 		<title>Flux Angular Demonstration</title>
 	</head>
 	<body>
-		<h1>Hello world</div>
+		<div ng-controller="ShoppingCartController">
+			<table class="shopping cart">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Cost</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in cart">
+						<td>{{ item.name }}</td>
+						<td>{{ item.cost }}</td>
+					</tr>
+				</tbody>
+			</table>
+			<form ng-submit="submit()">
+  				Item Name:
+  				<input type="text" ng-model="name" name="name" />
+  				Item Cost:
+  				<input type="text" ng-model="cost" name="cost" />
+  				<input type="submit" id="submit" value="Submit" />
+			</form>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
+		<script src="appbundle.js"></script>
 	</body>
 </html>
